@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .image {
+            width: 300px;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hayo Shalan, will you be my Valentine? Again!</h1>
+        <img src="https://i.pinimg.com/736x/d5/32/5e/d5325e337b1a3f12bd3790d7b01b4563.jpg" class="image" alt="Sugar and Brownie Bear">
+        <div class="buttons">
+            <button class="yes" onclick="showMessage()">Yes</button>
+            <button class="no" onmouseover="moveButton()">No</button>
+        </div>
+        <h2 id="response" style="display:none; color:#ff4d4d;">Yay! I knew it! ❤️</h2>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("response").style.display = "block";
+        }
+
+        function moveButton() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.querySelector(".no").style.left = x + "px";
+            document.querySelector(".no").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>

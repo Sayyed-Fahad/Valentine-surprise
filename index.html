@@ -40,22 +40,41 @@
             color: black;
             position: absolute;
         }
+        #celebration {
+            display: none;
+            color: #ff4d4d;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+        .confetti {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #ff4d4d;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hayo Shalan, will you be my Valentine? Again!</h1>
-        <img src="https://i.pinimg.com/736x/d5/32/5e/d5325e337b1a3f12bd3790d7b01b4563.jpg" class="image" alt="Sugar and Brownie Bear">
+        <img src="https://i.pinimg.com/originals/cd/a9/6b/cda96b7e8d0817fbe87e7fd26bda0f9e.jpg" class="image" alt="Sugar and Brownie Bear">
         <div class="buttons">
-            <button class="yes" onclick="showMessage()">Yes</button>
+            <button class="yes" onclick="showCelebration()">Yes</button>
             <button class="no" onmouseover="moveButton()">No</button>
         </div>
         <h2 id="response" style="display:none; color:#ff4d4d;">Yay! I knew it! ❤️</h2>
+        <div id="celebration">
+            <div class="confetti">🎉🎉🎉</div>
+            <p>Thank you for being my Valentine, again! ❤️</p>
+        </div>
     </div>
 
     <script>
-        function showMessage() {
-            document.getElementById("response").style.display = "block";
+        function showCelebration() {
+            document.getElementById("response").style.display = "none";
+            document.getElementById("celebration").style.display = "block";
         }
 
         function moveButton() {
